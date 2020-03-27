@@ -1,13 +1,12 @@
 import request from "request";
 import {NUMBER_OF_PRODUCTS, RANDOM_DRINK_URL} from '../common/constants'
-//const RANDOM_DRINK_URL ='https://www.thecocktaildb.com/api/json/v1/1/random.php';
 
 // Data Members
 let products = [];
 
 // Functions
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    return Math.floor(Math.random() * Math.floor(max)) + 1;
 }
 
 /**
