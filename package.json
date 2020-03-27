@@ -4,7 +4,7 @@
   "description": "storeAppServer",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js --exec babel-node --presets env",
+    "start": "babel-node server.js --presets env",
     "release": "npm run clean && npm run build && npm run serve",
     "clean": "rm -rf dist && mkdir dist",
     "build": "babel . -s -D -d dist --presets env --ignore node_modules",
