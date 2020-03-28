@@ -25,3 +25,8 @@ exports.addPurchase = (req, res) => {
   purchases.push(newPurchase);
   res.json(purchases);
 };
+
+exports.deletePurchases = (req, res) => {
+    purchases = [];
+    res.json({purchases, message: 'All purchases are deleted'});
+  };
