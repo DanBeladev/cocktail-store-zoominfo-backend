@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node server.js --presets env",
+    "dev": "nodemon server.js --exec babel-node --presets env",
     "release": "npm run clean && npm run build && npm run serve",
     "clean": "rm -rf dist && mkdir dist",
     "build": "babel . -s -D -d dist --presets env --ignore node_modules",
@@ -16,7 +17,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.2",
     "request": "^2.88.2"

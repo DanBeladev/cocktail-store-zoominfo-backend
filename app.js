@@ -1,15 +1,10 @@
 import express from "express";
-require('dotenv').config();
 import bodyParser from "body-parser";
 import cors from "cors"
 import routes from "./routes/index.js";
 
 
 const app = express();
-
-/**
- * Middleware
- */
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -30,9 +25,6 @@ app.use((err, req, res, next) => {
   next();
 });
 
-/**
- * Register the routes
- */
 routes(app);
 
 export default app;

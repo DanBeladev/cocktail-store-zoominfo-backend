@@ -1,16 +1,11 @@
-import usersRoute from './users-route';
-import productsRoute from './products-route';
-import purchasesRoute from './purchases-route';
+import usersRoute from './usersRoute';
+import productsRoute from './productsRoute';
+import purchasesRoute from './purchasesRoute';
 
-export default (app) => {
+export default app => {
+  app.use('/products', productsRoute);
 
-    // Products routes
-    app.use('/products', productsRoute);
+  app.use('/users', usersRoute);
 
-    // User routes
-    app.use('/users', usersRoute);
-
-    // Purchases routes
-    app.use('/purchases',purchasesRoute);
-        
+  app.use('/purchases', purchasesRoute);
 };
